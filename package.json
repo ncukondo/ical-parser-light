@@ -1,6 +1,6 @@
 {
   "name": "@ncukondo/ical-parser-light",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "",
   "main": "./built/index.js",
   "scripts": {
@@ -15,7 +15,11 @@
     "clean-product": "rimraf product",
     "build": "npm run clean-product && webpack --config webpack.production.config.js && npm run copy-to-product",
     "build-dev": "npm run clean-dist &&  npm run copy-to-dist && webpack --config webpack.dev.config.js",
-    "build-module": "npm run clean-built && yarn run tsc -p ./tsconfig.module.json"
+    "build-module": "npm run clean-built && yarn run tsc -p ./tsconfig.module.json",
+    "verdaccio:server": "verdaccio",
+    "verdaccio:publish:doPublish": "wait-on http://localhost:4873 && npm publish",
+    "verdaccio:publish": "wait-on http://localhost:4873 && npm publish",
+    "publish-local": "run-p verdaccio:*"
   },
   "keywords": [
     "typescript",
@@ -27,6 +31,7 @@
     "@types/jest": "^23.3.10",
     "cpx": "^1.5.0",
     "jest": "^23.6.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.15.3",
     "rimraf": "^2.6.2",
     "ts-jest": "^23.10.5",
@@ -35,6 +40,7 @@
     "tslint-config-prettier": "^1.17.0",
     "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.2.2",
+    "wait-on": "^3.2.0",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14",
