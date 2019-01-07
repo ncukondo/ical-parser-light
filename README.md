@@ -21,7 +21,8 @@ import parser, { ICalendarEvent } from './ical-parser-light';
 
 let sampleICS:string;  // iCalendar Data string
 
-let events = [...parser()].sort((a, b) => a.startDate.valueOf() - b.startDate.valueOf());
+let events = [...parser(sampleICS)].sort((a, b) => a.startDate.valueOf() - b.startDate.valueOf());
+
 events.forEach(event => {
   let date = event.startDate;
   console.log(keylist[`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}: event.summary`];
