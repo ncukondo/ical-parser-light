@@ -1,12 +1,4 @@
-# typescript-jest-starter
-
-## Tech Stack
-
-- [webpack](https://webpack.js.org/)
-- [TypeScript](http://www.typescriptlang.org/)
-- [TSLint](https://palantir.github.io/tslint/)
-- [Prettier](https://prettier.io/)
-- [Jest](https://facebook.github.io/jest/)
+# @ncukondo/ical-parser-light
 
 ## Prerequisites
 
@@ -22,7 +14,21 @@ yarn add @ncukondo/ical-parser-light
 npm install --save @ncukondo/ical-parser-light
 ```
 
-## about ical
+## Usage
+
+```typescript
+import parser, { ICalendarEvent } from './ical-parser-light';
+
+let sampleICS:string;  // iCalendar Data string
+
+let events = [...parser()].sort((a, b) => a.startDate.valueOf() - b.startDate.valueOf());
+events.forEach(event => {
+  let date = event.startDate;
+  console.log(keylist[`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}: event.summary`];
+});
+```
+
+## About ical
 
 - [web kanzaki](https://www.kanzaki.com/docs/ical/)
 - [iCalendar.org](https://icalendar.org/)
