@@ -14,56 +14,20 @@
 
 ## Getting Started
 
-### Clone the repository
-
 ```
-git clone --depth=1 git@github.com:ncukondo/typescript-jest-starter.git <project_name>
-```
-
-or
-
-```
-hub clone ncukondo/typescript-jest-starter <project_name>
-```
-
-### Install dependencies
-
-```
-cd <project_name>
+yarn add @ncukondo/ical-parser-light
 ```
 
 ```
-npm install
+npm install --save @ncukondo/ical-parser-light
 ```
 
-or
+## about ical
 
-```
-yarn install
-```
-
-### Development and build project
-
-```
-npm run build
-```
-
-### Start dev server
-
-```
-npm run start
-```
-
-### (memo git)
-
-```
-git init
-git add *
-git commit -a -m "comment"
-git remote add origin
-git push origin master  //master
-```
+- [web kanzaki](https://www.kanzaki.com/docs/ical/)
+- [iCalendar.org](https://icalendar.org/)
+- [rfc2445](https://www.ietf.org/rfc/rfc2445.txt)
 
 ## License
 
-This software is released under the MIT License, see LICENSE.txt.
+This software is released under the MIT License.
